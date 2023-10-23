@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 enum TipoEnvio {
   Express,
   MRW,
@@ -8,11 +10,19 @@ enum TipoEnvio {
 }
 
 @Component({
-  selector: 'app-cards',
-  templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.scss'],
+  selector: 'app-descripcion',
+  templateUrl: './descripcion.component.html',
+  styleUrls: ['./descripcion.component.scss']
 })
-export class CardsComponent {
+export class DescripcionComponent implements OnInit {
+
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
+  }
+
   datosCard = [
     {
       id: 1,
@@ -23,6 +33,7 @@ export class CardsComponent {
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Nintendo2.png',
       comentario:
         'Enim ullamco ex culpa laboris voluptate ullamco dolore qui Lorem deserunt laboris amet.',
+        comprado:false,
     },
     {
       id: 2,
@@ -33,6 +44,7 @@ export class CardsComponent {
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Oculus2.jpg',
       comentario:
         'Consequat deserunt sit quis aliquip aute occaecat non do occaecat ipsum ullamco sit.',
+        comprado:false,
     },
     {
       id: 3,
@@ -43,6 +55,7 @@ export class CardsComponent {
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_XBOX2.png',
       comentario:
         'Aute nulla dolore minim eiusmod in Lorem anim aute incididunt aliquip Lorem cillum.',
+        comprado:false,
     },
     {
       id: 4,
@@ -53,6 +66,7 @@ export class CardsComponent {
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Laptop.png',
       comentario:
         'Enim ullamco ex culpa laboris voluptate ullamco dolore qui Lorem deserunt laboris amet.',
+        comprado:false,
     },
     {
       id: 5,
@@ -63,6 +77,7 @@ export class CardsComponent {
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Playstation3.jpg',
       comentario:
         'Amet non esse adipisicing minim aliqua cillum laboris dolore.',
+        comprado:false,
     },
     {
       id: 6,
@@ -72,6 +87,7 @@ export class CardsComponent {
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Game.png',
       comentario: 'Ad consectetur do velit esse culpa laboris incididunt.',
+      comprado:false,
     },
     {
       id: 7,
@@ -81,6 +97,7 @@ export class CardsComponent {
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Headset.jpg',
       comentario: 'Cupidatat consequat sint irure excepteur do minim nulla in.',
+      comprado:false,
     },
     {
       id: 8,
@@ -91,6 +108,7 @@ export class CardsComponent {
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Keyboard.jpg',
       comentario:
         'Sunt tempor consectetur anim qui anim nostrud voluptate elit.',
+        comprado:false,
     },
     {
       id: 9,
@@ -101,6 +119,7 @@ export class CardsComponent {
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Chair.jpg',
       comentario:
         'Excepteur amet in ea commodo incididunt ut amet excepteur aliqua.',
+        comprado:false,
     },
     {
       id: 10,
@@ -110,9 +129,8 @@ export class CardsComponent {
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Mouse.jpg',
       comentario: 'Ex irure eu id anim magna ut quis adipisicing.',
+      comprado:false,
     },
   ];
-
-  
 
 }
