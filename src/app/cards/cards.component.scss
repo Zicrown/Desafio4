@@ -1,0 +1,62 @@
+.example-card {
+  max-width: 400px;
+  max-height: 600px;
+  margin: 15px;
+
+  img {
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    left: 10%;
+  }
+
+  mat-card-content {
+
+
+
+    p:first-of-type {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    p:last-of-type {
+      text-align: end;
+      font-weight: bold;
+      color: green;
+    }
+  }
+}
+
+.example-header-image {
+  background-image: url('https://m.media-amazon.com/images/I/216-OX9rBaL._SS200_.png');
+  background-size: cover;
+}
+
+.contenedorTarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+
+
+}
+
+.boton {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 0 18px;
+
+  button {
+    background-color: blue;
+    color: white;
+  }
+}
+
+.compras{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  color:lime;
+}
