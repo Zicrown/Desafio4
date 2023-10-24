@@ -1,0 +1,16 @@
+#contenido{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 100vh;
+    img{
+        height: 80%;
+    }
+    >div{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+}

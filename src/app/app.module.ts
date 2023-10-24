@@ -2,20 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import {MatCardModule} from '@angular/material/card';
-import { CardsComponent } from './cards/cards.component';
-import { DescripcionComponent } from './descripcion/descripcion.component';
-import { HeaderComponent } from './header/header.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { HomeComponent } from './home/home.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
+import { CardsComponent } from './home/cards/cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardsComponent,
-    DescripcionComponent,
-    HeaderComponent,
+    HomeComponent,
     CarouselComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,

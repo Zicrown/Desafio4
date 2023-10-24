@@ -19,16 +19,20 @@ export class DescripcionComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id') ;
     console.log(id);
+    this.idCompra=id;
+   
   }
 
-  datosCard = [
+  idCompra:any;
+
+  datos = [
     {
       id: 1,
       titulo: 'Articulo 1',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 300,
+      tipoEnvio: TipoEnvio[0],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Nintendo2.png',
       comentario:
@@ -38,8 +42,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 2,
       titulo: 'Articulo 2',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 250,
+      tipoEnvio: TipoEnvio[1],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Oculus2.jpg',
       comentario:
@@ -49,8 +53,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 3,
       titulo: 'Articulo 3',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 400,
+      tipoEnvio: TipoEnvio[2],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_XBOX2.png',
       comentario:
@@ -60,8 +64,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 4,
       titulo: 'Articulo 4',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 200,
+      tipoEnvio: TipoEnvio[3],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Laptop.png',
       comentario:
@@ -71,8 +75,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 5,
       titulo: 'Articulo 5',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 500,
+      tipoEnvio: TipoEnvio[4],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Playstation3.jpg',
       comentario:
@@ -82,8 +86,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 6,
       titulo: 'Articulo 6',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 60,
+      tipoEnvio: TipoEnvio[0],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_LP_Game.png',
       comentario: 'Ad consectetur do velit esse culpa laboris incididunt.',
@@ -92,8 +96,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 7,
       titulo: 'Articulo 7',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 100,
+      tipoEnvio: TipoEnvio[1],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Headset.jpg',
       comentario: 'Cupidatat consequat sint irure excepteur do minim nulla in.',
@@ -102,8 +106,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 8,
       titulo: 'Articulo 8',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 80,
+      tipoEnvio: TipoEnvio[2],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Keyboard.jpg',
       comentario:
@@ -113,8 +117,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 9,
       titulo: 'Articulo 9',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 120,
+      tipoEnvio: TipoEnvio[3],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Chair.jpg',
       comentario:
@@ -124,8 +128,8 @@ export class DescripcionComponent implements OnInit {
     {
       id: 10,
       titulo: 'Articulo 10',
-      precio: Math.round(Math.random() * 200),
-      tipoEnvio: TipoEnvio[Math.floor(Math.random() * 5)],
+      precio: 40,
+      tipoEnvio: TipoEnvio[4],
       imagen:
         'https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Karu/2021/June/Karu_Quad_Mouse.jpg',
       comentario: 'Ex irure eu id anim magna ut quis adipisicing.',
